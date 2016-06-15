@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>
+        {{#is "author"}}
+            {{author.name}} | {{@blog.title}}
+        {{else}}
+            {{meta_title}} | {{meta_description}}
+            {{#is "post, page"}} 
+                {{@blog.title}} 
+            {{/is}} 
+        {{/is}} 
+    </title>
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="{{asset "img/favicon.ico"}}" type="image/x-icon">
+
+    <!-- Plugin CSS
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bootstrap.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/jasny-bootstrap.min.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/jquery.mCustomScrollbar.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/magnific-popup.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome/css/font-awesome.css"}}">
+
+    <!-- Custom CSS 
+    ================================================== -->
+    <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/responsive.css"}}">
+
+    <!-- Modernizr  JS
+    ================================================== -->
+    <script type="text/javascript" src="{{asset "js/modernizr.custom.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery-1.12.0.min.js"}}"></script>
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+   <script>
+        function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+        var blog_load = getUrlParameter('blog_page');
+
+        if (typeof( Preloader ) != "undefined") { var Preloader = false;}
+
+        if ( blog_load === 'blog' || Preloader === "on" ){
+            document.write('<div id="preloader"><div class="spinner"><div class="sk-cube sk-cube1"></div> <div class="sk-cube sk-cube2"></div> <div class="sk-cube sk-cube3"></div> <div class="sk-cube sk-cube4"></div> <div class="sk-cube sk-cube5"></div> <div class="sk-cube sk-cube6"></div> <div class="sk-cube sk-cube7"></div> <div class="sk-cube sk-cube8"></div> <div class="sk-cube sk-cube9"></div></div></div>');
+        }
+   </script>
+
+   {{! Everything else gets inserted here }}
+   {{{body}}}
+
+   {{! Ghost outputs important scripts and data with this tag }}
+   {{ghost_footer}}
+    
+   <!-- Plugins -->
+   <script src="{{asset "js/plugin.js"}}"></script>
+   <script src="{{asset "js/acronym.js"}}"></script>
+
+    {{#is "home, paged"}}
+        {{^is "tag, author"}}
+            <script src="{{asset "js/backstretch.js"}}"></script>
+            <script>
+                if (typeof( Home_Slider_BG ) != "undefined") {
+                    $.backstretch(Home_Slider_BG, {duration: 3000, fade: 750});
+                }
+            </script>
+        {{/is}}
+    {{/is}}
+</html>
