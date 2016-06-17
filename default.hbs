@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,15 +8,15 @@
             {{author.name}} | {{@blog.title}}
         {{else}}
             {{meta_title}} | {{meta_description}}
-            {{#is "post, page"}} 
-                {{@blog.title}} 
-            {{/is}} 
-        {{/is}} 
+            {{#is "post, page"}}
+                {{@blog.title}}
+            {{/is}}
+        {{/is}}
     </title>
     <meta name="description" content="{{meta_description}}" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <!-- Favicons
     ================================================== -->
     <link rel="shortcut icon" href="{{asset "img/favicon.ico"}}" type="image/x-icon">
@@ -29,7 +29,7 @@
     <link rel="stylesheet" type="text/css" href="{{asset "css/magnific-popup.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/font-awesome/css/font-awesome.css"}}">
 
-    <!-- Custom CSS 
+    <!-- Custom CSS
     ================================================== -->
     <link rel="stylesheet" type="text/css" href="{{asset "css/main.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/responsive.css"}}">
@@ -59,8 +59,6 @@
         };
         var blog_load = getUrlParameter('blog_page');
 
-        if (typeof( Preloader ) != "undefined") { var Preloader = false;}
-
         if ( blog_load === 'blog' || Preloader === "on" ){
             document.write('<div id="preloader"><div class="spinner"><div class="sk-cube sk-cube1"></div> <div class="sk-cube sk-cube2"></div> <div class="sk-cube sk-cube3"></div> <div class="sk-cube sk-cube4"></div> <div class="sk-cube sk-cube5"></div> <div class="sk-cube sk-cube6"></div> <div class="sk-cube sk-cube7"></div> <div class="sk-cube sk-cube8"></div> <div class="sk-cube sk-cube9"></div></div></div>');
         }
@@ -71,7 +69,7 @@
 
    {{! Ghost outputs important scripts and data with this tag }}
    {{ghost_footer}}
-    
+
    <!-- Plugins -->
    <script src="{{asset "js/plugin.js"}}"></script>
    <script src="{{asset "js/acronym.js"}}"></script>
