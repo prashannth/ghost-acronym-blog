@@ -4,18 +4,18 @@
 {{! This bellow code is for loading header aria}}
 {{> "header"}}
 
-   <!-- Fullscreen Page 
+   <!-- Fullscreen Page
    ================================================== -->
    <div id="fullscreen">
        <div id="sidebar" class="blog blog-error">
-           <div class="error-page-bg featured-img"></div> 
+           <div class="error-page-bg featured-img"></div>
        </div>
-<script>                    
-    if ( Error_Page_BG ) {                            
+<script>
+    if ( typeof( Error_Page_BG ) != "undefined" ) {
         $('.error-page-bg').append('<img src="'+Error_Page_BG+'" alt="Page Not Found!">');
     } else {
         $('.error-page-bg').append('<img src="http://lorempixel.com/400/700" alt="Page Not Found!">');
-    } 
+    }
 </script>
        <div class="container blog-error">
            <div class="row">
@@ -31,10 +31,10 @@
                        <div class="space"></div>
                        <div class="back-to-home">
                             <ul class="tags">
-                                <script>                    
-                                    for ( var Url in Error_Page_Menu ) {                            
+                                <script>
+                                    for ( var Url in Error_Page_Menu ) {
                                         document.write('<li><a href="' + Error_Page_Menu[Url] + '" class="btn">'+ Url + '</a></li>');
-                                    } 
+                                    }
                                 </script>
                             </ul>
                        </div>
@@ -47,5 +47,3 @@
        <!-- Navigation Bar -->
        {{> "page-footer"}}
    </div> <!--- End Full Screen Blog Post Page -->
-
-
