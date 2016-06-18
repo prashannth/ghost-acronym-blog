@@ -5,11 +5,11 @@
 {{> "header"}}
 
 {{^is "paged"}}
-<!-- Fullscreen Page 
+<!-- Fullscreen Page
 ================================================== -->
-<div id="fullscreen-main" class="fullscreen home"> 
-    <div id="overlay" class="bg"></div> 
-    <div id="home" class="container"> 
+<div id="fullscreen-main" class="fullscreen home">
+    <div id="overlay" class="bg"></div>
+    <div id="home" class="container">
         <div class="row">
             <div id="left" class="col-sm-12 col-md-12"> <!--- Left Content -->
                 <div id="menu-main" data-toggle="offcanvas" data-target=".navmenu" data-canvas="body">
@@ -28,34 +28,34 @@
                         <div class="carousel-inner" role="listbox"><!-- Wrapper for slides -->
                             <script>
                                 if (typeof( Home_slider ) != "undefined") {
-                                    for ( var key in Home_slider ) {                            
+                                    for ( var key in Home_slider ) {
                                         document.write('<div class="item"><div class="carousel-caption"><h4>'+key+'</h4><h2>'+Home_slider[key]+'</h2></div></div>');
                                     }
-                                    $( ".carousel-inner > .item:eq( 0 )" ).addClass( "active" ); 
+                                    $( ".carousel-inner > .item:eq( 0 )" ).addClass( "active" );
                                 }
-                            </script> 
+                            </script>
                         </div>
                     </div>
                     <div class="space"></div>
                     <ul class="tags homepage_button">
                         <script>
                             if (typeof( Home_Page_Menu ) != "undefined") {
-                                for ( var Url in Home_Page_Menu ) {                            
+                                for ( var Url in Home_Page_Menu ) {
                                     document.write('<li><a href="' + Home_Page_Menu[Url] + '" class="btn">'+ Url + '</a></li>');
-                                } 
-                            } 
+                                }
+                            }
                         </script>
                     </ul>
                     <div class="space"></div>
                     <h6>Follow Me</h6>
                     <ul class="social-links">
-                        <script> 
-                            if (typeof( Home_Social ) != "undefined") {                   
-                                for ( var Url in Home_Social ) {                            
-                                    document.write("<li><a href='" + Home_Social[Url] + "'><i class='fa fa-" + Url + "'></i></a></li>");
-                                } 
-                            } 
-                        </script> 
+                        <script>
+                            if (typeof( Home_Social ) != "undefined") {
+                                for ( var Url in Home_Social ) {
+                                    document.write("<li><a target='_blank' href='" + Home_Social[Url] + "'><i class='fa fa-" + Url + "' aria-hidden='true'></i></a></li>");
+                                }
+                            }
+                        </script>
                     </ul>
                 </div>
             </div> <!--- End Left Content -->
@@ -65,9 +65,9 @@
 {{/is}}
 
 
-<!-- Fullscreen Page 
+<!-- Fullscreen Page
 ================================================== -->
-<div id="fullscreen-blog" class="fullscreen home blog {{^is "paged"}}hidden {{/is}}"> 
+<div id="fullscreen-blog" class="fullscreen home blog {{^is "paged"}}hidden {{/is}}">
     <div class="bg"></div>
     <!-- Top Navigation Bar -->
     <div class="blog-area">
@@ -88,20 +88,20 @@
                             {{pagination}}
                         </ul>
                     </div>
-                </div>            
+                </div>
             </div>
         </nav> <!-- End Top Navigation Bar -->
 
         <div id ="blog">
-            <div class="container">       
+            <div class="container">
                 <div id="content">
                     <div class="text"> <!--  Text -->
-                        <!-- Start Blog Posts --> 
+                        <!-- Start Blog Posts -->
                         <div id="posts" class="portfolio">
                             <div class="row">
                                 {{#foreach posts}}
                                     <div class="col-lg-4 col-md-4 col-sm-6 item">
-                                        <div class="item-content">      
+                                        <div class="item-content">
                                             <div class="details">
                                                 <a href="{{url}}"><h4>{{title}}</h4></a>
                                                 <span class="meta-author">Posted In&nbsp;:&nbsp;{{tags}}</span>
@@ -114,9 +114,9 @@
                                         </div> <!-- /.item-content -->
                                     </div> <!-- /.item -->
                                 {{/foreach}}
-                            </div> 
+                            </div>
                             <div class="clearfix"></div>
-                        </div> <!-- /.blog --> 
+                        </div> <!-- /.blog -->
                     </div><!--  /.text -->
                 </div> <!--- /.content-->
             </div> <!-- /.container -->
@@ -125,20 +125,18 @@
     <!-- Navigation Bar -->
 	<div id="mobile-blog">
 		<div class="container">
-			
+
 		</div> <!-- /.container -->
 	</div> <!-- /#mobile-blog -->
 </div> <!--- End Full Screen Blog Post Page -->
 
 
 <script>
-	$('#posts').clone().appendTo('#mobile-blog .container');       
-	$('#top-nav').clone().prependTo('#mobile-blog .container');       
+	$('#posts').clone().appendTo('#mobile-blog .container');
+	$('#top-nav').clone().prependTo('#mobile-blog .container');
     if ( blog_load === 'blog'){
         $('#fullscreen-main').addClass('hidden');
         $('.navmenu-fixed').css('display', 'none');
         $('#fullscreen-blog').removeClass('hidden');
     }
 </script>
-
-    
