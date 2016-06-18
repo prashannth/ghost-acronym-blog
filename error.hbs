@@ -4,6 +4,75 @@
 {{! This bellow code is for loading header aria}}
 {{> "header"}}
 
+
+<script>
+/* ===========================================
+ ========== Header Code Injection ===========
+ ============================================= */
+
+    var Preloader = "on";
+
+    /*=============== Home Page Settings =================*/
+    //Home Page Menu Item
+    var Home_Page_Menu = {
+        "About Me": "/about",
+        "Portfolio": "/tag/portfolio/",
+        "My Blog": "?blog_page=blog"
+    };
+
+   // Homepage Text Slider
+    var Home_slider = {
+        "Welcome to Acronym"  : "This is awesome Photoghrapy Theme",
+        "Acronym Photograph"   : "Discover the Awesomeness of the World",
+        "Acronym Explore" : "Awesome theme for Photography or Travel",
+    };
+
+    //Home Page Background Slider
+    var Home_Slider_BG = [
+        "http://res.cloudinary.com/prashannth/image/upload/v1466248099/DNomad-min_wuf7pr.jpg",
+        "http://res.cloudinary.com/prashannth/image/upload/v1466248101/digital-nomad-cafe-min_kdxvv9.jpg",
+        "http://res.cloudinary.com/prashannth/image/upload/v1466248101/digital-nomad-equipment-min_wdpmqm.jpg",
+        "http://res.cloudinary.com/prashannth/image/upload/v1466248101/digital_nomad-min_s4y7cd.jpg"
+      ];
+
+    // Home page social Profile
+    var Home_Social = {
+        "medium": "https://medium.com/@prashannth",
+        "facebook": "https://www.facebook.com/vprashannth",
+        "twitter": "https://twitter.com/vprashannth",
+        "linkedin": "https://www.linkedin.com/in/prashannth",
+        "google-plus": "https://plus.google.com/u/0/115133202389473951609",
+        "github": "https://github.com/prashannth",
+        "stack-overflow": "stackoverflow.com/users/2110121/prashannth-vijayakumar",
+        "instagram": "https://www.instagram.com/vprashannth"
+    };
+
+    //Author Info
+    var Author_Info = {
+        profile_picture: "http://res.cloudinary.com/prashannth/image/upload/v1466236190/headshot_uqfnyr.jpg", // Here is author porofile picture image link.
+        name: " Prashannth", // Here is Author name
+        url: "/about",
+    };
+
+    /*===============  Error Page Settings =================*/
+    // Error Page Menu Item
+    var Error_Page_Menu = {
+        "Home": "/",
+        "Blog": "/?blog_page=blog",
+    };
+    //Error Page Background Image
+    var Error_Page_BG = "http://res.cloudinary.com/prashannth/image/upload/v1466248098/404-min_uhvk4p.jpg";
+
+
+    // Disqus Shortname
+    var disqus_shortname ="prashannth";
+
+    //Copyright Text
+    var Copyright_Text = "Prashannth &copy; 2016";
+
+
+</script>
+
    <!-- Fullscreen Page
    ================================================== -->
    <div id="fullscreen">
