@@ -1,5 +1,8 @@
-<li class="home active"> <a href="/"> <i class="fa fa-home" aria-hidden="true"></i> </a> </li>
 <li class="blog"> <a href="/?blog_page=blog"> Blog </a> </li>
 {{#foreach navigation}}
-	<li class="{{slug}}{{#if current}} active{{/if}}"> <a href="{{url absolute="true"}}"> {{label}} </a> </li>
+	{{#if url.indexOf("?blog_page=blog") != -1 }}
+      <li class="{{slug}}{{#if current}} active{{/if}}"> <a href="/?blog_page=blog"> {{label}} </a> </li>
+   {{else}}
+      <li class="{{slug}}{{#if current}} active{{/if}}"> <a href="{{url absolute="true"}}"> {{label}} </a> </li>
+   {{/if}}
 {{/foreach}}
