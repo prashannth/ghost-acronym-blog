@@ -1,3 +1,4 @@
 {{#foreach navigation}}
-	<li class="{{slug}}{{#if current}} active{{/if}}"> <a href="{{url}}"> {{label}} </a> </li>
+	<li ng-if="url.indexOf('?blog_page&#x3D;blog') == -1" class="{{slug}}{{#if current}} active{{/if}}"> <a href="{{url absolute="true"}}"> {{label}} </a> </li>
+	<li ng-if="url.indexOf('?blog_page&#x3D;blog') != -1" class="{{slug}}{{#if current}} active{{/if}}"> <a href="/?blog_page=blog"> {{label}} </a> </li>
 {{/foreach}}
