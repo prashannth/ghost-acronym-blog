@@ -5,11 +5,10 @@
 {{/foreach}}
 
 <script>
-var slugs = window.location.href.split('/');
-console.log(slugs);
-if ( slugs[3] === "" ) {
-   $('#menu_home').addClass('active');
-} else if ( slugs[3] === "?blog_page=blog" ) {
-   $('#menu_blog').addClass('active');
-}
+   var slugs = window.location.href.split('/');
+   if ( slugs[3] === "" ) {
+      $('#menu_home').addClass('active');
+   } else if ( slugs[3] === "?blog_page=blog" ) {
+      $('#menu_blog').addClass('active');
+   }
 </script>
