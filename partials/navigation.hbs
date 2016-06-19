@@ -1,6 +1,7 @@
 {{#foreach navigation}}
-	{{#if url.indexOf("?blog_page=blog") != -1 }}
-      <li class="{{slug}}{{#if current}} active{{/if}}"> <a href="/?blog_page=blog"> {{label}} </a> </li>
+
+	{{#if url }}
+      <li class="{{slug}}{{#if current}} active{{/if}}"> <a href="/?blog_page=blog"> {{url}} </a> </li>
    {{else}}
       <li class="{{slug}}{{#if current}} active{{/if}}"> <a href="{{url absolute="true"}}"> {{label}} </a> </li>
    {{/if}}
