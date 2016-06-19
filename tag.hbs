@@ -4,7 +4,7 @@
 {{! This bellow code is for loading header aria}}
 {{> "header"}}
 
-<!-- Fullscreen Page 
+<!-- Fullscreen Page
 ================================================== -->
 <div id="tag-template">
     <div id="sidebar" class="blog">
@@ -60,7 +60,7 @@
                             <div class="tag-content" id="tag-content-wrap">
                                 {{#foreach posts}}
                                     <div class="col-sm-12 col-md-12 item">
-                                        <div class="item-content">                                            
+                                        <div class="item-content">
                                             <div class="image-area">
                                                 <img src="{{#if image}}{{image}}{{else}}{{asset "/img/no-thumb.png"}}{{/if}}" alt='{{title}}'/>
                                             </div>
@@ -68,7 +68,7 @@
                                                 <a href="{{url}}"><h4>{{title}}</h4></a>
                                                 <span class="meta-author">Posted In&nbsp;:&nbsp;{{tags}}</span>
                                             </div>
-                                        </div> <!-- /.portfolio-container -->                                        
+                                        </div> <!-- /.portfolio-container -->
                                     </div>  <!-- /.item -->
                                 {{/foreach}}
                             </div>
@@ -87,12 +87,12 @@
             <div class="pull-right text-right">
                 <nav id="more-page">
                     <ul class="pagination">
-                        <li><a href="{{@blog.url}}">&#x21d0; Back To Homepage</a></li>
+                        <li><a href="{{@blog.url}}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                         {{! Previous/next page links - displayed on every page }}
                         {{pagination}}
                     </ul>
                 </nav>
-            </div> 
+            </div>
         </div>
     </nav>
 </div> <!--- End Full Screen Blog Post Page -->
@@ -100,7 +100,7 @@
 <!-- Mobile Device Portfolio -->
 <div id="tag-two-mobile">
     <div id="tag-content-top">
-        <div class="tag-content-area">        
+        <div class="tag-content-area">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12"></div>
@@ -115,12 +115,12 @@
         <div class="text-center">
             <nav id="more-page">
                 <ul class="pagination">
-                    <li><a href="{{@blog.url}}">&#x21d0; Back To Homepage</a></li>
+                    <li><a href="{{@blog.url}}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                     {{! Previous/next page links - displayed on every page }}
                     {{pagination}}
                 </ul>
             </nav>
-        </div> 
+        </div>
     </div>
 </div>
 <!-- End Mobile Device Portfolio -->

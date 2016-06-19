@@ -4,7 +4,7 @@
 {{! This bellow code is for loading header aria}}
 {{> "header"}}
 
-<!-- Fullscreen Page 
+<!-- Fullscreen Page
 ================================================== -->
 <div id="portfolio-style-two-wrap">
     <div id="sidebar" class="blog">
@@ -59,7 +59,7 @@
                             <div class="portfolios-two" id="portfolio-two">
                                 {{#foreach posts}}
                                     <div class="{{#if @first}}col-sm-12 col-md-12{{else}}col-sm-6 col-md-6{{/if}} items">
-                                        <div class="portfolio-container">                                            
+                                        <div class="portfolio-container">
                                             <div class="image-area">
                                                 <img src="{{#if image}}{{image}}{{else}}{{asset "/img/no-thumb.png"}}{{/if}}" alt='{{title}}'/>
                                             </div>
@@ -72,7 +72,7 @@
                                                     <a class="single-link" href="{{url}}">
                                                         <i class="fa fa-location-arrow"></i>
                                                     </a>
-                                                </div> <!-- /.inner-content -->  
+                                                </div> <!-- /.inner-content -->
                                             </div> <!-- /.image-content -->
                                         </div> <!-- /.portfolio-container -->
                                     </div>  <!-- /.item -->
@@ -85,7 +85,7 @@
             </div><!--- /#right -->
         </div> <!-- /.row -->
     </div> <!-- /.container -->
-    
+
     <!-- Navigation Bar -->
     <nav id="footer-nav" class="home navbar navbar-default navbar-fixed-bottom" role="navigation">
       <div class="container">
@@ -94,12 +94,12 @@
             <div class="pull-right text-right">
                 <nav id="more-page">
                     <ul class="pagination">
-                        <li><a href="{{@blog.url}}">&#x21d0; Back To Homepage</a></li>
+                        <li><a href="{{@blog.url}}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                         {{! Previous/next page links - displayed on every page }}
                         {{pagination}}
                     </ul>
                 </nav>
-            </div> 
+            </div>
       </div>
     </nav>
 </div> <!--- End Full Screen Blog Post Page -->
@@ -107,7 +107,7 @@
 <!-- Mobile Device Portfolio -->
 <div id="porfolio-two-mobile">
     <div id="portfolio-content-top">
-        <div class="portfolio-content-area">        
+        <div class="portfolio-content-area">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12"></div>
@@ -122,12 +122,12 @@
           <div class="text-center">
               <nav id="more-page">
                   <ul class="pagination">
-                      <li><a href="{{@blog.url}}">&#x21d0; Back To Homepage</a></li>
+                      <li><a href="{{@blog.url}}"><i class="fa fa-home" aria-hidden="true"></i></a></li>
                       {{! Previous/next page links - displayed on every page }}
                       {{pagination}}
                   </ul>
               </nav>
-          </div> 
+          </div>
     </div>
 </div>
 <!-- End Mobile Device Portfolio -->
