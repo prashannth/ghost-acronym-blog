@@ -1,6 +1,3 @@
 {{#foreach navigation}}
-<li ng-show="url.indexOf('blog_page') == -1" class="{{slug}}{{#if current}} active{{/if}}"> <a href="{{url absolute="true"}}"> {{url}} </a> </li>
-<li ng-show="url.indexOf('blog_page') != -1" class="{{slug}}{{#if current}} active{{/if}}"> <a href="/?blog_page=blog"> {{url}} </a> </li>
-	<!-- <li ng-if="url.indexOf('blog_page') == -1" class="{{slug}}{{#if current}} active{{/if}}"> <a href="{{url absolute="true"}}"> {{label}} </a> </li>
-	<li ng-if="url.indexOf('blog_page') != -1" class="{{slug}}{{#if current}} active{{/if}}"> <a href="/?blog_page=blog"> {{label}} </a> </li> -->
+	<li class="{{slug}}{{#if current}} active{{/if}}"> <a href="{{url absolute="true"}}"> {{label}} </a> </li>
 {{/foreach}}
