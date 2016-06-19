@@ -1,7 +1,5 @@
+<li class="home"> <a href="/"> Home </a> </li>
+<li class="blog"> <a href="/?blog_page=blog"> Blog </a> </li>
 {{#foreach navigation}}
-	{{#if url == "/?blog_page=blog"}}
-      <li class="{{slug}}{{#if current}} active{{/if}}"> <a href="/?blog_page=blog"> {{label}} </a> </li>
-   {{else}}
-      <li class="{{slug}}{{#if current}} active{{/if}}"> <a href="{{url absolute="true"}}"> {{label}} </a> </li>
-   {{/if}}
+	<li class="{{slug}}{{#if current}} active{{/if}}"> <a href="{{url absolute="true"}}"> {{label}} </a> </li>
 {{/foreach}}

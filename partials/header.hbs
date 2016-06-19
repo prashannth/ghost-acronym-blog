@@ -1,10 +1,10 @@
 <!-- Off Canvas Navigation
 ================================================== -->
 <div class="navmenu navmenu-default navmenu-fixed-left offcanvas" style="background: linear-gradient(rgba(38, 41, 42, 0.72), rgba(38, 41, 42, 0.94)), url({{#if @blog.cover}}{{@blog.cover}}{{else}}http://lorempixel.com/400/700{{/if}});background: -webkit-linear-gradient(rgba(38, 41, 42, 0.72), rgba(38, 41, 42, 0.94)), url({{#if @blog.cover}}{{@blog.cover}}{{else}}http://lorempixel.com/400/700{{/if}});">
-    <div class="menu-content">    
-        <div class="menu-area">    
+    <div class="menu-content">
+        <div class="menu-area">
             <div class="author-info"></div>
-            <div id="main-navigation">    
+            <div id="main-navigation">
                 <ul class="nav navmenu-nav"> <!--- Menu -->
                     {{navigation}}
                 </ul><!--- End Menu -->
@@ -21,4 +21,16 @@
             </script>
         </div>
     </div>
-</div> <!--- End Off Canvas Side Menu --> 
+</div> <!--- End Off Canvas Side Menu -->
+
+<script>
+    $(function() {
+        $('#main-navigation ul').each(function(){
+            $(this).find('li').each(function(){
+                // cache jquery var
+                var current = $(this);
+                $(this).removeClass("active");
+            });
+        });
+    };
+</script>
