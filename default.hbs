@@ -13,8 +13,7 @@
             {{/is}}
         {{/is}}
     </title>
-    <meta name="author" content="{{author.name}}" />
-    <meta name="keywords" content="{{author.name}}, {{meta_title}}, {{meta_description}}" />
+    <meta name="keywords" content="{{meta_title}}, {{meta_description}}" />
     <meta name="description" content="{{meta_description}}" />
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -41,11 +40,7 @@
     <script type="text/javascript" src="{{asset "js/modernizr.custom.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/jquery-1.12.0.min.js"}}"></script>
 
-    <!-- Custom  JS
-    ================================================== -->
-    <script src="//load.sumome.com/" data-sumo-site-id="a4503022f31cb94e794cbc2513c45b80ef6bcd873efb7831992e07d599b4a60f" async="async"></script>
-    <script src="//my.hellobar.com/c8859a9de7fd2310521a63884a17225508181bb0.js" type="text/javascript" charset="utf-8" async="async"></script>    {{! Ghost outputs important style and meta data with this tag }}
-
+    {{! Ghost outputs important style and meta data with this tag }}
     {{ghost_head}}
 </head>
 
@@ -81,6 +76,9 @@
    <!-- Plugins -->
    <script src="{{asset "js/plugin.js"}}"></script>
    <script src="{{asset "js/acronym.js"}}"></script>
+
+   <!-- Custom  JS -->
+   <script src="//my.hellobar.com/c8859a9de7fd2310521a63884a17225508181bb0.js" type="text/javascript" charset="utf-8" async="async"></script>
 
     {{#is "home, paged"}}
         {{^is "tag, author"}}
