@@ -158,5 +158,5 @@ text_code=main_content;return text_code;}});var $contactForm=$('#contact-form');
  if (typeof( Author_Info ) != "undefined") {
      $('.navmenu .author-info').append('<a class="navmenu-brand" href="'+Author_Info['url']+'">'+Author_Info['name']+'</a>');
  } else {
-    $('.navmenu .author-info').append('<a class="navmenu-brand" href="//www.prashannth.com">Prashannth</a>');
+    $('.navmenu .author-info').append('<a class="navmenu-brand" href="//ramaprashanth.herokuapp.com">Rama Prashanth</a>');
  }
